@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<!--Adicionado CSS-->
 	<link rel="stylesheet" href="css/estilo.css">
@@ -67,7 +67,7 @@
 		</div>
 	</div>
 	<!--Adicionando footer-->
-    <?php 
+    <?php
         include_once("footer.php")
     ?>
 </body>
