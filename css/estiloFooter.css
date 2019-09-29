@@ -1,8 +1,6 @@
-#estiloFooter{
+footer{
   background-color: #007bff;
-  color: white;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-  height: auto;
+  margin-top: 655px;
+  padding: 15px;
+
 }
