@@ -12,6 +12,29 @@
 		?>
 		<hr>
 	</div>
+	<div class="container">
+		<h3 style="text-align:center">Funções</h3>
+		<div class="card-group">
+		  <div class="card">
+		    <img src="img/icon/busca.png" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">Buscar por vagas</h5>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="img/icon/compara.png" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">Comparar preços</h5>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img src="img/icon/reserva.png" class="card-img-top" alt="...">
+		    <div class="card-body">
+		      <h5 class="card-title">Reservar vagas</h5>
+		    </div>
+		  </div>
+		</div>
+	</div>
 	<!--Adicionando footer-->
     <?php
         include_once("footer.php")
