@@ -16,8 +16,10 @@
     if(strtotime($data) < strtotime($sysData) && $idade >= 6570){
         echo '<script>alert("DATA VÁLIDA")</script>';
         echo '<script>alert("MAIOR DE IDADE")</script>';
+        header('Location: /logar.php');
     }else if(strtotime($data) > strtotime($sysData) && $idade < 6570){
       echo '<script>alert("MENOR DE IDADE")</script>';
       echo '<script>alert("DATA INVÁLIDA")</script>';
+      header('Location: /form.php');
     }
  ?>
