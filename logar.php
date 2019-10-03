@@ -6,7 +6,7 @@
 	<title>VaGou!</title>
 </head>
 <body>
-	<div>
+	<div class="container">
 		<?php
 			include_once("menu.php");
 		?>

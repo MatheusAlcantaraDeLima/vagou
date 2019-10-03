@@ -14,7 +14,7 @@
 	<title>VaGou!</title>
 </head>
 <body>
-	<div>
+	<div class="container">
         <?php
             include_once("menu.php");
         ?>
@@ -39,6 +39,7 @@
             <div class="form-group">
                 <label><input type="text" name="nomePJ" placeholder="Digite o Nome do estacionamento" class="form-control" size="100" maxlength="40" required></label><br>
                 <label><input type="text" name="email" placeholder="Digite o e-mail da empresa" class="form-control" size="100"  maxlength="100" required></label><br>
+                <label><input type="text" name="telefone" id="telefone" placeholder="Digite o número de telefone" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="complemento" placeholder="Digite o complemento" class="form-control" size="100"  maxlength="30"></label><br>
@@ -54,7 +55,7 @@
 				$("#cpf").mask("999.999.999-99");
 				$("#cnpj").mask("99.999.999/9999-99");
 				$("#cep").mask("99999-999");
-				//$("#dataNasci").mask("99/99/9999");
+				$("#telefone").mask("(99) 99999-9999");
 			});
 		</script>
     <!--Chamando arquivo js com funções de interação do usuário com o form-->
