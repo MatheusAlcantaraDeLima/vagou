@@ -15,12 +15,15 @@
     if($data < $sysData && $idade >= 568025136){
         echo '<script>alert("DATA VÁLIDA")</script>';
         echo  '<script>alert("MAIOR DE IDADE")</script>';
+        echo  '<script>alert("CADASTRADO COM SUCESSO")</script>';
+        echo  '<script>window.location.href="logar.php"</script>';
     }
     else if($data < $sysData && $idade < 568025136){
       echo '<script>alert("DATA VÁLIDA")</script>';
       echo '<script>alert("MENOR DE IDADE")</script>';
-      //header('Location: /form.php');
+      echo  '<script>window.location.href="form.php"</script>';
     }else{
       echo '<script>alert("DATA INVÁLIDA")</script>';
+      echo  '<script>window.location.href="form.php"</script>';
     }
  ?>
