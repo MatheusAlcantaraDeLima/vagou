@@ -16,16 +16,13 @@
 		<div class="row funcoes">
 			<div class="col"></div>
 			<div class="col">
-				<h3>Busca</h3>
-				<img src="img/icon/busca.png" class="" alt="icone de busca do app VaGou!">
+				<img src="img/icon/busca_icon.png" alt="icone de busca do app VaGou!">
 			</div>
 			<div class="col">
-				<h3>Compara</h3>
-				<img src="img/icon/compara.png" class="" alt=" icone de comparação de preços do VaGou!">
+				<img src="img/icon/compara_icon.png" alt=" icone de comparação de preços do VaGou!">
 			</div>
 			<div class="col"> 
-				<h3>Reserva</h3>
-				<img src="img/icon/reserva.png" class="" alt="icone de reserva de vagas do VaGou!">
+				<img src="img/icon/reserva_icon.png" alt="icone de reserva de vagas do VaGou!">
 			</div>
 			<div class="col"></div>
 		</div>
