@@ -10,7 +10,9 @@
 			crossorigin="anonymous">
 		</script>
 		<!--Adicionando o plugin de máscara do jQuery-->
-		<script src="js/jquery/src/jquery.mask.js" type="text/javascript" /></script>
+		<script src="js/jquery/src/jquery.mask.js" type="text/javascript"></script>
+        <!--Adicionado Web Service para procurar e preencher os campos do PJ após inserir o CEP-->
+        <script src="js/webServiceCep.js" type="text/javascript"></script>
 	<title>VaGou!</title>
 </head>
 <body>
@@ -42,9 +44,11 @@
                 <label><input type="text" name="email" placeholder="Digite o e-mail da empresa" class="form-control" size="100"  maxlength="100" required></label><br>
                 <label><input type="text" name="telefone" id="telefone" placeholder="Digite o número de telefone" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ" class="form-control" size="100" required></label><br>
-                <label><input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="form-control" size="100" required></label><br>
-                <label><input type="text" name="complemento" placeholder="Digite o complemento" class="form-control" size="100"  maxlength="30"></label><br>
-                <label><input type="text" name="numero" placeholder="Digite o número" class="form-control" size="100"  maxlength="5" required></label><br>
+                <label><input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="form-control" size="100" required onblur="pesquisacep(this.value);"></label><br>
+                <label><input type="text" name="rua" id="rua" placeholder="Digite a Rua" class="form-control" size="100" required></label><br>
+                <label><input type="text" name="bairro" id="bairro" placeholder="Digite o bairro" class="form-control" size="100" required></label><br>
+                <label><input type="text" name="cidade" id="cidade" placeholder="Digite a cidade" class="form-control" size="100" required></label><br>
+                <label><input type="text" name="estado" id="uf" placeholder="Digite o Estado" class="form-control" size="100" required></label><br>
                 <label><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label><br>
             </div>
             <input type="submit" class="btn btn-primary">

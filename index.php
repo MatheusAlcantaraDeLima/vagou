@@ -12,8 +12,8 @@
 			include_once("menu.php");
 		?>
 		<hr>
-		<h2 style="text-align: center;">Funções do APP</h2>
-		<div class="row funcoes">
+		<h2 style="text-align: center;">Funções do APP</h2><br>
+		<div class="row">
 			<div class="col"></div>
 			<div class="col">
 				<img src="img/icon/busca_icon.png" alt="icone de busca do app VaGou!">
@@ -25,6 +25,34 @@
 				<img src="img/icon/reserva_icon.png" alt="icone de reserva de vagas do VaGou!">
 			</div>
 			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
+					<div class="card-body text-primary">
+						<h5 class="card-title">Busca</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
+					<div class="card-body text-primary">
+						<h5 class="card-title">Compara</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
+					<div class="card-body text-primary">
+						<h5 class="card-title">Reserva</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!--Adicionando footer-->

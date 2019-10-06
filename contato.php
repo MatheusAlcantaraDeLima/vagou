@@ -15,57 +15,15 @@
 		<hr>
 		<h3 style="text-align:center;">Equipe VaGou!</h3>
 		<div class="row">
-				<div class="col">
-					<div class="row">
-						<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
-					</div>
-					<div class="row">
-					<div class="col"></div>
-						<div>
-							<a href="https://github.com/MatheusAlcantaraDeLima" target="_blank"><input type="button" value="GitHub" class="btn btn-primary"></a>
-						</div>
-						<div>
-							<a href="https://www.linkedin.com/in/matheus-alcantara-119164164/" target="_blank" class="botao"><input type="button" value="LinkedIn" 		class="btn btn-primary">
-							</a>
-						</div>
-						<div class="col"></div>
-						<div class="col"></div>
-					</div>
-				</div>
-				<div class="col">
-				<div class="row">
-						<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
-					</div>
-					<div class="row">
-					<div class="col"></div>
-						<div>
-							<a href="https://github.com/MatheusAlcantaraDeLima" target="_blank"><input type="button" value="GitHub" class="btn btn-primary"></a>
-						</div>
-						<div>
-							<a href="https://www.linkedin.com/in/matheus-alcantara-119164164/" target="_blank" class="botao"><input type="button" value="LinkedIn" 		class="btn btn-primary">
-							</a>
-						</div>
-						<div class="col"></div>
-						<div class="col"></div>
-					</div>
-				</div>
-				<div class="col">
-				<div class="row">
-						<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
-					</div>
-					<div class="row">
-					<div class="col-2"></div>
-						<div>
-							<a href="https://github.com/MatheusAlcantaraDeLima" target="_blank"><input type="button" value="GitHub" class="btn btn-primary"></a>
-						</div>
-						<div>
-							<a href="https://www.linkedin.com/in/matheus-alcantara-119164164/" target="_blank" class="botao"><input type="button" value="LinkedIn" 		class="btn btn-primary">
-							</a>
-						</div>
-						<div class="col"></div>
-						<div class="col"></div>
-					</div>
-				</div>
+			<div class="col">
+				<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
+			</div>
+			<div class="col">
+				<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
+			</div>
+			<div class="col">
+				<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
+			</div>
 		</div>
 	</div>
 	<!--Adicionando footer-->
