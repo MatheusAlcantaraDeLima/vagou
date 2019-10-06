@@ -33,6 +33,7 @@
                 <label><input type="password" name="senhaPF" placeholder="Digite sua senha" class="form-control" size="100" maxlength="20" required></label><br>
             </div>
             <input type="submit" class="btn btn-primary">
+            <input class="btn btn-primary" type="reset" value="Resetar">
         </form>
         <!--FORM pessoa jurídica-->
         <form action="validaForm.php" method="post" id="formJuridica">
@@ -47,6 +48,7 @@
                 <label><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label><br>
             </div>
             <input type="submit" class="btn btn-primary">
+            <input class="btn btn-primary" type="reset" value="Resetar">
         </form>
     </div>
 		<!--Adicionando máscara para o CPF, CNPJ, CEP e DATA-->
