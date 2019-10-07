@@ -1,0 +1,8 @@
+create table pf(
+    id integer primary key AUTO_INCREMENT,
+	nome varchar(50),
+    email varchar(100),
+    dataNasci date,
+    cpf varchar(11),
+    senha varchar(20)
+);

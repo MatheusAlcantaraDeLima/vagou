@@ -14,42 +14,30 @@
 		<hr>
 		<h2 style="text-align: center;">Funções do APP</h2><br>
 		<div class="row">
-			<div class="col"></div>
-			<div class="col">
-				<img src="img/icon/busca_icon.png" alt="icone de busca do app VaGou!">
-			</div>
-			<div class="col">
-				<img src="img/icon/compara_icon.png" alt=" icone de comparação de preços do VaGou!">
-			</div>
-			<div class="col"> 
-				<img src="img/icon/reserva_icon.png" alt="icone de reserva de vagas do VaGou!">
-			</div>
-			<div class="col"></div>
-		</div>
-		<div class="row">
-			<div class="col">
+			<div class="col-4">
+				<img src="img/icon/busca_icon.png" alt="icone de busca do app VaGou!" style="margin-left:100px;">
 				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
 					<div class="card-body text-primary">
-						<h5 class="card-title">Busca</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<h5 class="card-title" style="text-align:center;">Busca</h5>
+						<p class="card-text"><strong>Busca por estacionamentos próximos a você</strong></p>
 					</div>
 				</div>
 			</div>
-
-			<div class="col">
+			<div class="col-4">
+				<img src="img/icon/compara_icon.png" alt=" icone de comparação de preços do VaGou!" style="margin-left:100px;">
 				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
 					<div class="card-body text-primary">
-						<h5 class="card-title">Compara</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<h5 class="card-title" style="text-align:center;">Compara</h5>
+						<p class="card-text"><strong>Compara e mostra os melhores preços para você</strong></p>
 					</div>
 				</div>
 			</div>
-
-			<div class="col">
+			<div class="col-4"> 
+				<img src="img/icon/reserva_icon.png" alt="icone de reserva de vagas do VaGou!" style="margin-left:100px;">
 				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
 					<div class="card-body text-primary">
-						<h5 class="card-title">Reserva</h5>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<h5 class="card-title" style="text-align:center;">Reserva</h5>
+						<p class="card-text"><strong>Reserve a sua vaga sem mesmo ter saído de casa</strong></p>
 					</div>
 				</div>
 			</div>

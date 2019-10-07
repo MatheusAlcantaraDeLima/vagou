@@ -13,16 +13,11 @@
 			include_once("menu.php");
 		?>
 		<hr>
-		<h3 style="text-align:center;">Equipe VaGou!</h3>
-		<div class="row">
-			<div class="col">
-				<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
-			</div>
-			<div class="col">
-				<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
-			</div>
-			<div class="col">
-				<img src="img/equipe/matheus.png" alt="desenvolvedor" class="img_grupo">
+		<div class="card text-center">
+			<div class="card-body">
+				<h5 class="card-title">Conatatos</h5>
+				<p class="card-text"><strong>Email:</strong> vagou@contato.com</p>
+				<p class="card-text"><strong>Telefone:</strong> (21) 48751-4751</p>
 			</div>
 		</div>
 	</div>

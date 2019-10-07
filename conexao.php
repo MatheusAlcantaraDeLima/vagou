@@ -1,3 +1,3 @@
 <?php
-  $conexao = mysqli_connect("localhost","root","","vagou","3306");
+  $conexao = mysqli_connect("localhost","root","","vagou_bd","3306");
  ?>

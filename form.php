@@ -26,10 +26,10 @@
         <input type="button" id="pf"  class="btn btn-primary" name="perfil" value="Pessoa Física"> &nbsp;&nbsp;
         <input type="button" id="pj" class="btn btn-primary" name="perfil" value="Pessoa Jurídica">
         <!--FORM pessoa física-->
-        <form action="validaForm.php" method="post" id="formFisica">
+        <form action="validaFormPF.php" method="post" id="formFisica">
             <div class="form-group">
                 <label><input type="text" name="nomePF" placeholder="Digite seu nome" class="form-control" size="100" maxlength="50" required></label><br>
-                <label><input type="text" name="email" placeholder="Digite seu e-mail" class="form-control" size="100" maxlength="100" required></label><br>
+                <label><input type="text" name="emailPF" placeholder="Digite seu e-mail" class="form-control" size="100" maxlength="100" required></label><br>
                 <label><input type="date" name="dataNasci" id="dataNasci" placeholder="Digite sua data de nascimento" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" class="form-control" size="100"  required></label><br>
                 <label><input type="password" name="senhaPF" placeholder="Digite sua senha" class="form-control" size="100" maxlength="20" required></label><br>
@@ -38,10 +38,10 @@
             <input class="btn btn-primary" type="reset" value="Resetar">
         </form>
         <!--FORM pessoa jurídica-->
-        <form action="validaForm.php" method="post" id="formJuridica">
+        <form action="validaFormPJ.php" method="post" id="formJuridica">
             <div class="form-group">
                 <label><input type="text" name="nomePJ" placeholder="Digite o Nome do estacionamento" class="form-control" size="100" maxlength="40" required></label><br>
-                <label><input type="text" name="email" placeholder="Digite o e-mail da empresa" class="form-control" size="100"  maxlength="100" required></label><br>
+                <label><input type="text" name="emailPJ" placeholder="Digite o e-mail da empresa" class="form-control" size="100"  maxlength="100" required></label><br>
                 <label><input type="text" name="telefone" id="telefone" placeholder="Digite o número de telefone" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="form-control" size="100" required onblur="pesquisacep(this.value);"></label><br>
