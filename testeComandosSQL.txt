@@ -6,3 +6,17 @@ create table pf(
     cpf varchar(11),
     senha varchar(20)
 );
+
+create table pj(
+    id integer primary key AUTO_INCREMENT,
+	nome_estacionamento varchar(50),
+    email varchar(100),
+    telefone varchar(11),
+    cnpj varchar(14),
+    cep varchar(8),
+    rua varchar(50),
+    bairro varchar(25),
+    cidade varchar(25),
+    estado varchar(3),
+    senha varchar(20)
+);

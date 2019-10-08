@@ -19,22 +19,21 @@
     // 568025136 segundos equivale a 18 anos
     if($data < $sysData && $idade >= 568025136){
         echo '<script>alert("DATA VÁLIDA e MAIOR DE IDADE")</script>';
-        echo  '<script>window.location.href="logar.php"</script>';
     }
     else if($data < $sysData && $idade < 568025136){
       echo '<script>alert("DATA VÁLIDA e MENOR DE IDADE")</script>';
-      echo  '<script>window.location.href="form.php"</script>';
     }else{
       echo '<script>alert("DATA INVÁLIDA")</script>';
-      echo '<script>window.location.href="form.php"</script>';
     }
 
     include_once("conexao.php");
 
     $insert_bd = "insert into pf values (null, '".$nomePF."', '".$email."', '".$dataNasci."', '".$cpf."', '".$senhaPF."')";
     if(mysqli_query($conexao, $insert_bd)){
-      echo  "<script>window.alert('Gravado com sucesso');</script>";
+      echo  "<script>alert('Gravado com sucesso');</script>";
+      echo  '<script>window.location.href="logar.php"</script>';
     }else{
-      echo  "<script>window.alert('Erro ao gravar');</script>";
+      echo  "<script>alert('Erro ao gravar');</script>";
+      echo  '<script>window.location.href="form.php"</script>';
     }
  ?>
