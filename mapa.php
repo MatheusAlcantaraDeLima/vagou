@@ -26,7 +26,7 @@
                 }
             }
             function showPosition(position){
-                window.alert(`Latidute ${position.coords.latitude}<br> Longitude ${position.coords.longitude}`);
+                window.alert(`Latidute ${position.coords.latitude}, Longitude ${position.coords.longitude}`);
             }
     </script>
     <title>VaGou!</title>
@@ -49,8 +49,8 @@
                     })
                 ],
                 view: new ol.View({
-                    center: ol.proj.fromLonLat([-22.888378,-43.114495]),
-                    zoom: 4
+                    center: ol.proj.fromLonLat([ -43.15, -22.9]),
+                    zoom: 13
                 })
             });
     </script>
