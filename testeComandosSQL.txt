@@ -3,7 +3,7 @@ create table pf(
 	nome varchar(50),
     email varchar(100),
     dataNasci date,
-    cpf varchar(11),
+    cpf varchar(14),
     senha varchar(20)
 );
 
@@ -12,8 +12,8 @@ create table pj(
 	nome_estacionamento varchar(50),
     email varchar(100),
     telefone varchar(11),
-    cnpj varchar(14),
-    cep varchar(8),
+    cnpj varchar(18),
+    cep varchar(9),
     rua varchar(50),
     bairro varchar(25),
     cidade varchar(25),
