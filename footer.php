@@ -1,5 +1,5 @@
-<!--Adicionado CSS-->
-<link rel="stylesheet" href="css/estiloRodape.css">
+<!--Adicionado CSS <link rel="stylesheet" href="css/estiloRodape.css">-->
+
 <footer>
   <div class="row">
     <div class="col"></div>
