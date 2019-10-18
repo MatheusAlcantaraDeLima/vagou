@@ -28,7 +28,10 @@
 
     include_once("conexao.php");
 
-    $insert_bd = "insert into pf values (null, '".$nomePF."', '".$email."', '".$dataNasci."', '".$cpf."', '".$senhaPF."')";
+    mysqli_set_charset($conexao, "utf8");
+
+    $insert_bd = "insert into cliente values ('".$cpf."', '".$nomePF."', '".$senhaPF."', '".$dataNasci."', '".$email."')";
+
     if(mysqli_query($conexao, $insert_bd)){
       echo  "<script>alert('Gravado com sucesso');</script>";
       echo  '<script>window.location.href="logar.php"</script>';

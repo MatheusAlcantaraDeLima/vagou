@@ -25,17 +25,53 @@
     
     include_once("conexao.php");
 
-    $insert_bd = "insert into estacionamento values (null, '".$nomePJ."', '".$cnpj."', '".$senhaPJ."', null, null, '".$telefone."', '".$email."')";
-
-    $insert_bd = "insert into endereco values (null, '".$nomePJ."', '".$cep."', '".$bairro."', '".$rua."', '".$cidade."', '".$estado."')";
+    mysqli_set_charset($conexao, "utf8");
     
-    $insert_bd = "insert into preco values (null, '".$preco_hora."', '".$preco_diario."', '".$preco_semanal."', '".$preco_mensal."', '".$preco_anual."')";
+    $insertTable_endereco = "insert into endereco values (null, '".$nomePJ."', '".$cep."', '".$bairro."', '".$rua."', '".$cidade."', '".$estado."')";
+    
+    $insertTable_preco = "insert into preco values (null, '".$nomePJ."', '".$preco_hora."', '".$preco_diario."', '".$preco_semanal."', '".$preco_mensal."', '".$preco_anual."')";
 
-    if(mysqli_query($conexao, $insert_bd)){
+    //possível solucao
+    $buscaId_endereco = mysqli_query($conexao, "SELECT id_endereco FROM 'endereco' WHERE rua = $rua");
+    $result_endereco = mysqli_query($conexao, $id_endereco);
+    $id_endereco = mysqli_fetch_array($result_endereco);
+
+    $buscaId_preco = mysqli_query($conexao, "SELECT id_preco FROM 'preco' WHERE nome_estacio2 = $nomePJ");
+    $result_preco = mysqli_query($conexao, $buscaId_preco);
+    $id_preco = mysqli_fetch_array($result_preco);
+
+    $insertTable_estacionamento = "insert into estacionamento (nome_estacio,CNPJ,senha_estacio,id_endereco1,id_preco1,telefone,email_estacio) values 
+    ('".$nomePJ."','".$cnpj."','".$senhaPJ."','".$id_endereco."','".$id_preco."','".$telefone."','".$email."');";
+
+    ?>
+    <p><?php echo($id_endereco)?></p>
+
+  
+<?php
+    if(mysqli_query($conexao, $insertTable_estacionamento)){
       echo  "<script>alert('Gravado com sucesso');</script>";
-      echo  '<script>window.location.href="logar.php"</script>';
+      //echo  '<script>window.location.href="logar.php"</script>';
     }else{
       echo  "<script>alert('Erro ao gravar');</script>";
-      echo  '<script>window.location.href="form.php"</script>';
+      
+
+      echo("<script>console.log(<?php $buscaId_endereco ?>);</script>");
+      echo("<script>console.log(<?php $buscaId_preco ?>);</script>");
+    }
+
+    if(mysqli_query($conexao, $insertTable_endereco)){
+      echo  "<script>alert('Gravado com sucesso');</script>";
+      //echo  '<script>window.location.href="logar.php"</script>';
+    }else{
+      echo  "<script>alert('Erro ao gravar');</script>";
+      //echo  '<script>window.location.href="form.php"</script>';
+    }
+
+    if(mysqli_query($conexao, $insertTable_preco)){
+      echo  "<script>alert('Gravado com sucesso');</script>";
+     // echo  '<script>window.location.href="logar.php"</script>';
+    }else{
+      echo  "<script>alert('Erro ao gravar');</script>";
+      //echo  '<script>window.location.href="form.php"</script>';
     }
  ?>

@@ -1,5 +1,6 @@
 create  table preco (
     id_preco int  unsigned auto_increment not null,
+    nome_estacio2 varchar(40) unique not null,
     preco_hora varchar(11),
     diario varchar(11),
     semanal varchar(11),
@@ -51,3 +52,21 @@ CREATE TABLE estacionamento (
     CONSTRAINT fk_id_endereco FOREIGN KEY (id_endereco1) REFERENCES endereco (id_endereco),
     CONSTRAINT fk_id_preco FOREIGN KEY (id_preco1) REFERENCES preco (id_preco)
 );
+
+teste
+CREATE TABLE estacionamento (
+    id_estacio int unsigned auto_increment not null,
+    nome_estacio VARCHAR (40) not null,
+    CNPJ varchar (18) unique not null,
+    senha_estacio VARCHAR (40) not null,
+    telefone varchar(15) not null,
+    email_estacio varchar(100) unique not null,
+    primary key (id_estacio)
+);
+
+
+
+insert into estacionamento (nome_estacio,CNPJ,senha_estacio,id_endereco1,id_preco1,telefone,email_estacio) values 
+
+('agoravaidarcerto','123456789','123','11','1','264561','agoravaidarcerto@gmail.com');
+
