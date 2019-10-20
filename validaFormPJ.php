@@ -27,21 +27,22 @@
 
     mysqli_set_charset($conexao, "utf8");
     
-    $insertTable_endereco = "insert into endereco values (null, '".$nomePJ."', '".$cep."', '".$bairro."', '".$rua."', '".$cidade."', '".$estado."')";
+    $insertTable_endereco = $dbh -> prepare("insert into endereco values (null, '".$nomePJ."', '".$cep."', '".$bairro."', '".$rua."', '".$cidade."', '".$estado."')");
+    $insertTable_endereco -> execute();
     
-    $insertTable_preco = "insert into preco values (null, '".$nomePJ."', '".$preco_hora."', '".$preco_diario."', '".$preco_semanal."', '".$preco_mensal."', '".$preco_anual."')";
+    $insertTable_preco = $dbh -> prepare("insert into preco values (null, '".$nomePJ."', '".$preco_hora."', '".$preco_diario."', '".$preco_semanal."', '".$preco_mensal."', '".$preco_anual."')");
+    $insertTable_preco -> execute();
 
     //possível solucao
-    $buscaId_endereco = mysqli_query($conexao, "SELECT id_endereco FROM 'endereco' WHERE rua = $rua");
-    $result_endereco = mysqli_query($conexao, $id_endereco);
-    $id_endereco = mysqli_fetch_array($result_endereco);
+    
+    $id_endereco = $insertTable_endereco -> $dbh -> lastInsertId();
 
-    $buscaId_preco = mysqli_query($conexao, "SELECT id_preco FROM 'preco' WHERE nome_estacio2 = $nomePJ");
-    $result_preco = mysqli_query($conexao, $buscaId_preco);
-    $id_preco = mysqli_fetch_array($result_preco);
+    $id_preco = $insertTable_preco -> $dbh -> lastInsertId();
 
-    $insertTable_estacionamento = "insert into estacionamento (nome_estacio,CNPJ,senha_estacio,id_endereco1,id_preco1,telefone,email_estacio) values 
-    ('".$nomePJ."','".$cnpj."','".$senhaPJ."','".$id_endereco."','".$id_preco."','".$telefone."','".$email."');";
+    $insertTable_estacionamento = $dbh -> prepare("insert into estacionamento (nome_estacio,CNPJ,senha_estacio,id_endereco1,id_preco1,telefone,email_estacio) values 
+    ('".$nomePJ."','".$cnpj."','".$senhaPJ."','".$id_endereco."','".$id_preco."','".$telefone."','".$email."');");
+
+    $insertTable_estacionamento -> execute();
 
     ?>
     <p><?php echo($id_endereco)?></p>

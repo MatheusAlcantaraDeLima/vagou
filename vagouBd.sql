@@ -65,7 +65,7 @@ CREATE TABLE estacionamento (
 );
 
 
-
+-------------------------------------------------------------------------------- // -------------------------------------------------------------------------
 insert into estacionamento (nome_estacio,CNPJ,senha_estacio,id_endereco1,id_preco1,telefone,email_estacio) values 
 
 ('agoravaidarcerto','123456789','123','11','1','264561','agoravaidarcerto@gmail.com');
