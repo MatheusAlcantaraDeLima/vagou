@@ -11,13 +11,13 @@
 <body>
     <style>
         tr{
-            border:1px solid grey;
+            border:1px solid #007bff;
         }
         th{
-            border:1px solid grey;
+            border:1px solid #007bff;
         }
         td{
-            border:1px solid grey;
+            border:1px solid #007bff;
         }
     </style>
     <div class="container">
@@ -35,20 +35,22 @@
             
 
         ?>
-        <table>
-            <thead>
-                <tr style="text-align: center;">
-                    <th scope="col">Nome do estacionamento</th>
-                    <th scope="col">telefone</th>
-                    <th scope="col">Rua</th>
-                    <th scope="col">Bairro</th>
-                    <th scope="col">Cidade</th>
-                    <th scope="col">Preço por Hora</th>
-                    <th scope="col">Preço por Dias</th>
-                    <th scope="col">Preço por Semanas</th>
-                    <th scope="col">Preço por Mês</th>
-                </tr>
-            </thead>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr style="text-align: center;">
+                        <th scope="col">Nome do estacionamento</th>
+                        <th scope="col">telefone</th>
+                        <th scope="col">Rua</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Preço por Hora</th>
+                        <th scope="col">Preço por Dias</th>
+                        <th scope="col">Preço por Semanas</th>
+                        <th scope="col">Preço por Mês</th>
+                    </tr>
+                </thead>
+        
             <?php
                 while($rows = mysqli_fetch_array($execQuery)){
                 
@@ -69,7 +71,8 @@
             <?php
                 }//fecha o while
             ?>
-        </table>
+            </table>
+        </div>
             <?php
                 }//fecha o if
             ?>

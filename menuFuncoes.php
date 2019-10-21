@@ -1,3 +1,8 @@
+<style>
+	a{
+		margin:2px;
+	}
+</style>
 <div class="col">
 	<div class="row">
 		<h1>VaGou!</h1>
