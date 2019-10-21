@@ -9,6 +9,17 @@
     <title>VaGou!</title>
 </head>
 <body>
+    <style>
+        tr{
+            border:1px solid grey;
+        }
+        th{
+            border:1px solid grey;
+        }
+        td{
+            border:1px solid grey;
+        }
+    </style>
     <div class="container">
         <?php
             include_once("menuFuncoes.php");
@@ -24,33 +35,37 @@
             
 
         ?>
-        <table width="100%">
-            <tr>
-                <th>Nome do estacionamento</th>
-                <th>telefone</th>
-                <th>Rua</th>
-                <th>Bairro</th>
-                <th>Cidade</th>
-                <th>Preço por Hora</th>
-                <th>Preço por Dias</th>
-                <th>Preço por Semanas</th>
-                <th>Preço por Mês</th>
-            </tr>
+        <table>
+            <thead>
+                <tr style="text-align: center;">
+                    <th scope="col">Nome do estacionamento</th>
+                    <th scope="col">telefone</th>
+                    <th scope="col">Rua</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Preço por Hora</th>
+                    <th scope="col">Preço por Dias</th>
+                    <th scope="col">Preço por Semanas</th>
+                    <th scope="col">Preço por Mês</th>
+                </tr>
+            </thead>
             <?php
                 while($rows = mysqli_fetch_array($execQuery)){
                 
             ?>
-            <tr>
-				<td><?php echo $rows["nome_estacio"] ?></td>
-				<td><?php echo $rows["telefone"] ?></td>
-				<td><?php echo $rows["rua"] ?></td>
-				<td><?php echo $rows["bairro"] ?></td>
-                <td><?php echo $rows["cidade"] ?></td>
-                <td><?php echo $rows["preco_hora"] ?></td>
-                <td><?php echo $rows["diario"] ?></td>
-                <td><?php echo $rows["semanal"] ?></td>
-                <td><?php echo $rows["mensal"] ?></td>							
-            </tr>
+            <tbody>
+                <tr style="text-align: center;">
+                    <td ><?php echo $rows["nome_estacio"] ?></td>
+                    <td ><?php echo $rows["telefone"] ?></td>
+                    <td ><?php echo $rows["rua"] ?></td>
+                    <td ><?php echo $rows["bairro"] ?></td>
+                    <td ><?php echo $rows["cidade"] ?></td>
+                    <td ><?php echo $rows["preco_hora"] ?></td>
+                    <td ><?php echo $rows["diario"] ?></td>
+                    <td ><?php echo $rows["semanal"] ?></td>
+                    <td ><?php echo $rows["mensal"] ?></td>							
+                </tr>
+            </tbody>
             <?php
                 }//fecha o while
             ?>
