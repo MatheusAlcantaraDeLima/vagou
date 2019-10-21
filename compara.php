@@ -57,11 +57,11 @@
             ?>
             <tbody>
                 <tr style="text-align: center;">
-                    <td ><?php echo $rows["nome_estacio"] ?></td>
+                    <td ><?php echo  utf8_encode($rows["nome_estacio"]) ?></td>
                     <td ><?php echo $rows["telefone"] ?></td>
-                    <td ><?php echo $rows["rua"] ?></td>
-                    <td ><?php echo $rows["bairro"] ?></td>
-                    <td ><?php echo $rows["cidade"] ?></td>
+                    <td ><?php echo  utf8_encode($rows["rua"]) ?></td>
+                    <td ><?php echo  utf8_encode($rows["bairro"]) ?></td>
+                    <td ><?php echo  utf8_encode($rows["cidade"]) ?></td>
                     <td ><?php echo $rows["preco_hora"] ?></td>
                     <td ><?php echo $rows["diario"] ?></td>
                     <td ><?php echo $rows["semanal"] ?></td>
