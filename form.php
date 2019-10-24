@@ -49,11 +49,11 @@
                 <label><input type="text" name="bairro" id="bairro" placeholder="Digite o bairro" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="cidade" id="cidade" placeholder="Digite a cidade" class="form-control" size="100" required></label><br>
                 <label><input type="text" name="estado" id="uf" placeholder="Digite o Estado" class="form-control" size="100" required></label><br>
-                <label><input type="text" name="preco_hora" placeholder="Digite o preço por hora" class="form-control preco" size="100" required></label><br>
-                <label><input type="text" name="preco_dia" placeholder="Digite o preço por dia" class="form-control preco" size="100"></label><br>
-                <label><input type="text" name="preco_semana" placeholder="Digite o preço por semana" class="form-control preco" size="100"></label><br>
-                <label><input type="text" name="preco_mes" placeholder="Digite o preço por mes" class="form-control preco" size="100"></label><br>
-                <label><input type="text" name="preco_ano" placeholder="Digite o preço por ano" class="form-control preco" size="100"></label><br>
+                <label><input type="text" name="preco_hora" placeholder="Digite o preço por hora" class="form-control preco" size="100" required maxlength="9"></label><br>
+                <label><input type="text" name="preco_dia" placeholder="Digite o preço por dia" class="form-control preco" size="100" maxlength="9"></label><br>
+                <label><input type="text" name="preco_semana" placeholder="Digite o preço por semana" class="form-control preco" size="100" maxlength="9"></label><br>
+                <label><input type="text" name="preco_mes" placeholder="Digite o preço por mes" class="form-control preco" size="100" maxlength="9"></label><br>
+                <label><input type="text" name="preco_ano" placeholder="Digite o preço por ano" class="form-control preco" size="100" maxlength="9"></label><br>
                 <label><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label><br>
             </div>
             <input type="submit" class="btn btn-primary">
@@ -67,7 +67,7 @@
 				$("#cnpj").mask("99.999.999/9999-99");
 				$("#cep").mask("99999-999");
 				$("#telefone").mask("(99) 99999-9999");
-                $(".preco").mask("R$ 9.999,99");
+                $(".preco").mask('#.##0,00', {reverse: true});
 			});
 		</script>
     <!--Chamando arquivo js com funções de interação do usuário com o form-->

@@ -24,15 +24,15 @@
         <?php
             include_once("menuFuncoes.php");
             include_once("conexao.php");
+            mysqli_set_charset($conexao, "utf8");
 		?>
         <hr>
         <h2 style="text-align: center;">Compara</h2>
         <?php
-            $querySelect =  "select nome_estacio, telefone, rua, bairro, cidade, preco_hora, diario, semanal,mensal from estacionamento";
+            //Mostra os estaiconamentos de forma ascendente com relação aos valores($)
+            $querySelect =  "select nome_estacio, telefone, rua, bairro, cidade, preco_hora, diario, semanal,mensal from estacionamento order by preco_hora, diario, semanal,mensal ASC";
             $execQuery = mysqli_query($conexao, $querySelect);
             if(mysqli_num_rows($execQuery) > 0){
-
-            
 
         ?>
         <div class="table-responsive">
