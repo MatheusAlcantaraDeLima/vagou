@@ -15,6 +15,7 @@
 		?>
         <hr>
         <h2 style="text-align: center;">Reserva</h2>
+       <input type="number" class="form-control" placeholder=" Digite o ID do estacionamento" min="1"><br><input type="submit" value="buscar" class="btn btn-primary">
     </div>
 </body>
 </html>
