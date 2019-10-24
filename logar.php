@@ -17,7 +17,7 @@
             <input type="text" name="email" placeholder="insira seu e-mail" class="form-control" size="50"><br>
             <input type="password" name="senha" placeholder="insira a sua senha" class="form-control" size="50"><br>
         </div>
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" value="logar-se" class="btn btn-primary">
         </form>
 	</div>
 	<!--Adicionando footer-->
