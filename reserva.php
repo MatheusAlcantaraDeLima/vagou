@@ -15,7 +15,64 @@
 		?>
         <hr>
         <h2 style="text-align: center;">Reserva</h2>
-       <input type="number" class="form-control" placeholder=" Digite o ID do estacionamento" min="1"><br><input type="submit" value="buscar" class="btn btn-primary">
+        <form>
+            <input type="number" name="id" class="form-control" placeholder=" Digite o ID do estacionamento" min="1"><br>
+            <input type="submit" value="buscar" class="btn btn-primary">
+        </form>
+        <?php
+            if(isset($_GET["id"])){
+                $id = $_GET['id'];
+                include_once("conexao.php");
+                mysqli_set_charset($conexao, "utf8");
+            
+                $selectIdEstacio = "select id_estacio, nome_estacio, telefone, rua, bairro, cidade, preco_hora, diario, semanal, mensal from estacionamento where id_estacio like '".$id."' ";
+            
+                $execQuery = mysqli_query($conexao, $selectIdEstacio);
+                if(mysqli_num_rows($execQuery) > 0){
+        ?>
+        <table class="table table-dark">
+                <thead>
+                    <tr style="text-align: center;">
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome do estacionamento</th>
+                        <th scope="col">telefone</th>
+                        <th scope="col">Rua</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Preço por Hora</th>
+                        <th scope="col">Preço por Dias</th>
+                        <th scope="col">Preço por Semanas</th>
+                        <th scope="col">Preço por Mês</th>
+                    </tr>
+                </thead>
+        <?php
+            while($rows = mysqli_fetch_array($execQuery)){
+        ?>
+        <tbody>
+            <tr style="text-align: center;">
+                <td ><?php echo  $rows["id_estacio"] ?></td>
+                <td ><?php echo  utf8_encode($rows["nome_estacio"]) ?></td>
+                <td ><?php echo $rows["telefone"] ?></td>
+                <td ><?php echo  utf8_encode($rows["rua"]) ?></td>
+                <td ><?php echo  utf8_encode($rows["bairro"]) ?></td>
+                <td ><?php echo  utf8_encode($rows["cidade"]) ?></td>
+                <td ><?php echo $rows["preco_hora"] ?></td>
+                <td ><?php echo $rows["diario"] ?></td>
+                <td ><?php echo $rows["semanal"] ?></td>
+                <td ><?php echo $rows["mensal"] ?></td>							
+            </tr>
+        </tbody>
+        <?php
+            }   //FIM DO WHILE    
+        ?>
+        </table> <!--FIM DA TABLE-->   
+        <?php
+                //FIM DO IF
+                }else{
+                    echo "Nenhum estacionamento encontrado com o ID informado.";
+                }
+            }    //FIM DO PRIMEIRO IF                         
+        ?>
     </div>
 </body>
 </html>

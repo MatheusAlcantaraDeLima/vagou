@@ -30,15 +30,16 @@
         <h2 style="text-align: center;">Compara</h2>
         <?php
             //Mostra os estaiconamentos de forma ascendente com relação aos valores($)
-            $querySelect =  "select nome_estacio, telefone, rua, bairro, cidade, preco_hora, diario, semanal,mensal from estacionamento order by preco_hora, diario, semanal,mensal ASC";
+            $querySelect =  "select id_estacio, nome_estacio, telefone, rua, bairro, cidade, preco_hora, diario, semanal,mensal from estacionamento order by preco_hora, diario, semanal,mensal ASC";
             $execQuery = mysqli_query($conexao, $querySelect);
             if(mysqli_num_rows($execQuery) > 0){
 
         ?>
         <div class="table-responsive">
-            <table>
+            <table class="table table-dark">
                 <thead>
                     <tr style="text-align: center;">
+                        <th scope="col">ID</th>
                         <th scope="col">Nome do estacionamento</th>
                         <th scope="col">telefone</th>
                         <th scope="col">Rua</th>
@@ -57,6 +58,7 @@
             ?>
             <tbody>
                 <tr style="text-align: center;">
+                    <td ><?php echo  $rows["id_estacio"] ?></td>
                     <td ><?php echo  utf8_encode($rows["nome_estacio"]) ?></td>
                     <td ><?php echo $rows["telefone"] ?></td>
                     <td ><?php echo  utf8_encode($rows["rua"]) ?></td>
@@ -71,7 +73,7 @@
             <?php
                 }//fecha o while
             ?>
-            </table>
+            </table> <!--FIM DA TABLE--> 
         </div>
             <?php
                 }//fecha o if
