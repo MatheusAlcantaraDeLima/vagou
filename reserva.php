@@ -29,7 +29,7 @@
             
                 $execQuery = mysqli_query($conexao, $selectIdEstacio);
                 if(mysqli_num_rows($execQuery) > 0){
-        ?>
+        ?><br>
         <table class="table table-dark">
                 <thead>
                     <tr style="text-align: center;">
@@ -50,26 +50,27 @@
         ?>
         <tbody>
             <tr style="text-align: center;">
-                <td ><?php echo  $rows["id_estacio"] ?></td>
-                <td ><?php echo  utf8_encode($rows["nome_estacio"]) ?></td>
+                <td ><?php echo $rows["id_estacio"] ?></td>
+                <td ><?php echo $rows["nome_estacio"] ?></td>
                 <td ><?php echo $rows["telefone"] ?></td>
-                <td ><?php echo  utf8_encode($rows["rua"]) ?></td>
-                <td ><?php echo  utf8_encode($rows["bairro"]) ?></td>
-                <td ><?php echo  utf8_encode($rows["cidade"]) ?></td>
+                <td ><?php echo $rows["rua"] ?></td>
+                <td ><?php echo $rows["bairro"] ?></td>
+                <td ><?php echo $rows["cidade"] ?></td>
                 <td ><?php echo $rows["preco_hora"] ?></td>
                 <td ><?php echo $rows["diario"] ?></td>
                 <td ><?php echo $rows["semanal"] ?></td>
                 <td ><?php echo $rows["mensal"] ?></td>							
-            </tr>
+            </tr>    
         </tbody>
         <?php
             }   //FIM DO WHILE    
         ?>
-        </table> <!--FIM DA TABLE-->   
+        </table><!--FIM DA TABLE-->
+        <input type="submit" value="Reservar" class="btn btn-primary">
         <?php
                 //FIM DO IF
                 }else{
-                    echo "Nenhum estacionamento encontrado com o ID informado.";
+                    echo "<script> alert('Nenhum estacionamento encontrado com o ID informado. Favor, insira um id válido') </script>";
                 }
             }    //FIM DO PRIMEIRO IF                         
         ?>
