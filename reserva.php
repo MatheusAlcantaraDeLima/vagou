@@ -100,8 +100,9 @@
                     echo "<script> alert('Vaga Reservada com sucesso.') </script>";
                 }else{
                     echo "<script> alert('Erro ao reservar a vaga.') </script>";
-                    echo $idCliente.'<br>';
-                    echo $email;
+                    //TESTES PARA VERIFICAR SE OS VALORES ESTÃO SENDO PEGOS
+                    //echo $idCliente.'<br>';
+                    //echo $email;
                 }
             }                     
         ?>
