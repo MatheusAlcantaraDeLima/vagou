@@ -13,7 +13,7 @@ create table reservar (
     data_saida datetime not null,
     cpf_cliente varchar(11) not null,
     primary key (id_vaga),
-    CONSTRAINT fk_cpf_cliente FOREIGN KEY (cpf_cliente) REFERENCES cliente (cpf)
+    CONSTRAINT fk_cpf_cliente FOREIGN KEY (cpf_cliente) REFERENCES cliente (CPF)
 );
 
 CREATE TABLE estacionamento (

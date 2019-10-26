@@ -11,7 +11,8 @@
 <body>
     <div class="container">
         <?php
-			include_once("menuFuncoes.php");
+            include_once("menuFuncoes.php");
+            session_start(); //INICIANDO A SESSÃO
 		?>
         <hr>
         <h2 style="text-align: center;">Reserva</h2>
@@ -19,11 +20,13 @@
             <input type="number" name="id" class="form-control" placeholder=" Digite o ID do estacionamento" min="1"><br>
             <input type="submit" value="buscar" class="btn btn-primary">
         </form>
-        <?php
+        <?php 
+            //echo $_SESSION['email']; TESTE PARA VER SE O VALOR DA VARIÁVEL ESTÁ CHEGANDO
+            include_once("conexao.php");
+            mysqli_set_charset($conexao, "utf8");
+
             if(isset($_GET["id"])){
                 $id = $_GET['id'];
-                include_once("conexao.php");
-                mysqli_set_charset($conexao, "utf8");
             
                 $selectIdEstacio = "select id_estacio, nome_estacio, telefone, rua, bairro, cidade, preco_hora, diario, semanal, mensal from estacionamento where id_estacio like '".$id."' ";
             
@@ -66,13 +69,34 @@
             }   //FIM DO WHILE    
         ?>
         </table><!--FIM DA TABLE-->
-        <input type="submit" value="Reservar" class="btn btn-primary">
+        <form method="get">
+            Datade entrada: <br>
+            <input type="date" class="form-control" name="data_entrada">
+            Datade de saída: <br>
+            <input type="date" class="form-control" name="data_saida"><br>
+            <input type="submit" value="Reservar" class="btn btn-primary">
+        </form>
         <?php
-                //FIM DO IF
+                //FIM DO IF E INÍCIO DO ELSE
                 }else{
                     echo "<script> alert('Nenhum estacionamento encontrado com o ID informado. Favor, insira um id válido') </script>";
                 }
-            }    //FIM DO PRIMEIRO IF                         
+            }    //FIM DO PRIMEIRO IF    
+            if(isset($_GET['data_entrada'], $_GET['data_saida'])){
+                $data_entrada = $_GET['data_entrada'];
+                $data_saida = $_GET['data_saida'];
+                
+                $email = $_SESSION['email'];
+                $selectId =  "select CPF from cliente where email like '".$email."' ";
+
+                $insereReserva = "insert into reservar (id_vaga, data_entrada, data_saida, cpf_cliente) values (null, '".$data_entrada."', '".$data_saida."', '".$selectId."'); ";
+
+                if(mysqli_query($conexao, $insereReserva)){
+                    echo "<script> alert('Vaga Reservada com sucesso.') </script>";
+                }else{
+                    echo "<script> alert('Erro ao reservar a vaga.') </script>";
+                }
+            }                     
         ?>
     </div>
 </body>
