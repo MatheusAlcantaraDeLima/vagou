@@ -12,7 +12,7 @@
     
     $emailDb = $dados['email'];
     $senhaDb = $dados['senha_client'];
-
+    
     if($email == $emailDb && $senha == $senhaDb){
         session_start();
         $_SESSION['email'] = $dados['email'];

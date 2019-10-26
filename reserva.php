@@ -85,24 +85,30 @@
                 $data_entrada = $_GET['data_entrada'];
                 $data_saida = $_GET['data_saida'];
                 
-                $email = $_SESSION['email'];
-                $selectId =  "select CPF from cliente where email like '".$email."' ";
+                $sysData = date("Y-m-d"); //pega a data do sistema
+                //não permite que datas erradas sejam cadastradas na table
+                if(($data_entrada == $sysData || $data_entrada >= $sysData) && ($data_saida >= $sysData)){
+                    $email = $_SESSION['email'];
+                    $selectId =  "select CPF from cliente where email like '".$email."' ";
 
-                $executaBusca = mysqli_query($conexao, $selectId);
+                    $executaBusca = mysqli_query($conexao, $selectId);
 
-                $buscaId = mysqli_fetch_array($executaBusca);
+                    $buscaId = mysqli_fetch_array($executaBusca);
 
-                $idCliente = $buscaId['CPF'];
+                    $idCliente = $buscaId['CPF'];
 
-                $insereReserva = "insert into reservar (data_entrada, data_saida, cpf_cliente) values ('".$data_entrada."', '".$data_saida."', '".$idCliente."'); ";
+                    $insereReserva = "insert into reservar (data_entrada, data_saida, cpf_cliente) values ('".$data_entrada."', '".$data_saida."', '".$idCliente."'); ";
 
-                if(mysqli_query($conexao, $insereReserva)){
-                    echo "<script> alert('Vaga Reservada com sucesso.') </script>";
+                    if(mysqli_query($conexao, $insereReserva)){
+                        echo "<script> alert('Vaga Reservada com sucesso.') </script>";
+                    }else{
+                        echo "<script> alert('Erro ao reservar a vaga.') </script>";
+                        //TESTES PARA VERIFICAR SE OS VALORES ESTÃO SENDO PEGOS
+                        //echo $idCliente.'<br>';
+                        //echo $email;
+                    }
                 }else{
-                    echo "<script> alert('Erro ao reservar a vaga.') </script>";
-                    //TESTES PARA VERIFICAR SE OS VALORES ESTÃO SENDO PEGOS
-                    //echo $idCliente.'<br>';
-                    //echo $email;
+                    echo "<script> alert('A data inserida é inválida.') </script>";
                 }
             }                     
         ?>
