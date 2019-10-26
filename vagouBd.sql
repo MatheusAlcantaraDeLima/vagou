@@ -9,9 +9,9 @@ create table cliente (
 
 create table reservar (
     id_vaga int unsigned auto_increment ,
-    data_entrada datetime not null,
-    data_saida datetime not null,
-    cpf_cliente varchar(11) not null,
+    data_entrada date not null,
+    data_saida date not null,
+    cpf_cliente varchar(14) not null,
     primary key (id_vaga),
     CONSTRAINT fk_cpf_cliente FOREIGN KEY (cpf_cliente) REFERENCES cliente (CPF)
 );

@@ -20,8 +20,7 @@
             <input type="number" name="id" class="form-control" placeholder=" Digite o ID do estacionamento" min="1"><br>
             <input type="submit" value="buscar" class="btn btn-primary">
         </form>
-        <?php 
-            //echo $_SESSION['email']; TESTE PARA VER SE O VALOR DA VARIÁVEL ESTÁ CHEGANDO
+        <?php
             include_once("conexao.php");
             mysqli_set_charset($conexao, "utf8");
 
@@ -73,8 +72,8 @@
             Datade entrada: <br>
             <input type="date" class="form-control" name="data_entrada">
             Datade de saída: <br>
-            <input type="date" class="form-control" name="data_saida"><br>
-            <input type="submit" value="Reservar" class="btn btn-primary">
+            <input type="date" class="form-control" name="data_saida" required><br>
+            <input type="submit" value="Reservar" class="btn btn-primary" required>
         </form>
         <?php
                 //FIM DO IF E INÍCIO DO ELSE
@@ -95,12 +94,14 @@
 
                 $idCliente = $buscaId['CPF'];
 
-                $insereReserva = "insert into reservar (id_vaga, data_entrada, data_saida, cpf_cliente) values (null, '".$data_entrada."', '".$data_saida."', '".$idCliente."'); ";
+                $insereReserva = "insert into reservar (data_entrada, data_saida, cpf_cliente) values ('".$data_entrada."', '".$data_saida."', '".$idCliente."'); ";
 
                 if(mysqli_query($conexao, $insereReserva)){
                     echo "<script> alert('Vaga Reservada com sucesso.') </script>";
                 }else{
                     echo "<script> alert('Erro ao reservar a vaga.') </script>";
+                    echo $idCliente.'<br>';
+                    echo $email;
                 }
             }                     
         ?>
