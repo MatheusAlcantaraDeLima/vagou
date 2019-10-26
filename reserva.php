@@ -89,7 +89,13 @@
                 $email = $_SESSION['email'];
                 $selectId =  "select CPF from cliente where email like '".$email."' ";
 
-                $insereReserva = "insert into reservar (id_vaga, data_entrada, data_saida, cpf_cliente) values (null, '".$data_entrada."', '".$data_saida."', '".$selectId."'); ";
+                $executaBusca = mysqli_query($conexao, $selectId);
+
+                $buscaId = mysqli_fetch_array($executaBusca);
+
+                $idCliente = $buscaId['CPF'];
+
+                $insereReserva = "insert into reservar (id_vaga, data_entrada, data_saida, cpf_cliente) values (null, '".$data_entrada."', '".$data_saida."', '".$idCliente."'); ";
 
                 if(mysqli_query($conexao, $insereReserva)){
                     echo "<script> alert('Vaga Reservada com sucesso.') </script>";
