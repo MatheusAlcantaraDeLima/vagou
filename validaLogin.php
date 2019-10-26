@@ -21,8 +21,6 @@
     }else{
         echo "<script>alert('Erro ao logar-se.')</script>";
         echo "<script> window.location.href = 'logar.php'</script>";
-       echo $emailDb;
-       echo $senhaDb;
     }
     
 ?>
