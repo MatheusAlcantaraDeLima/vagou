@@ -69,10 +69,14 @@
         ?>
         </table><!--FIM DA TABLE-->
         <form method="get">
-            Datade entrada: <br>
-            <input type="date" class="form-control" name="data_entrada">
-            Datade de saída: <br>
-            <input type="date" class="form-control" name="data_saida" required><br>
+            <label>
+                Datade e hora de entrada: <br>
+                <input type="date" class="form-control" name="data_entrada"><input type="time" class="form-control" name="hora_entrada" required>
+            </label><br>
+            <label>
+                Datade e hora de saída: <br>
+                <input type="date" class="form-control" name="data_saida" required><input type="time" class="form-control" name="hora_saida" required><br>
+            </label><br>
             <input type="submit" value="Reservar" class="btn btn-primary" required>
         </form>
         <?php
@@ -81,13 +85,16 @@
                     echo "<script> alert('Nenhum estacionamento encontrado com o ID informado. Favor, insira um id válido') </script>";
                 }
             }    //FIM DO PRIMEIRO IF    
-            if(isset($_GET['data_entrada'], $_GET['data_saida'])){
+            if(isset($_GET['data_entrada'], $_GET['data_saida'], $_GET['hora_entrada'], $_GET['hora_saida'])){
                 $data_entrada = $_GET['data_entrada'];
                 $data_saida = $_GET['data_saida'];
+                $hora_entrada = $_GET['hora_entrada'];
+                $hora_saida = $_GET['hora_saida'];
                 
                 $sysData = date("Y-m-d"); //pega a data do sistema
                 //não permite que datas erradas sejam cadastradas na table
-                if(($data_entrada == $sysData || $data_entrada >= $sysData) && ($data_saida >= $sysData)){
+                if( (($data_entrada >= $sysData) && ($data_saida >= $sysData)) || (($data_entrada == $data_saida) && ($hora_entrada > $hora_saida)) ){
+                   
                     $email = $_SESSION['email'];
                     $selectId =  "select CPF from cliente where email like '".$email."' ";
 
@@ -97,8 +104,8 @@
 
                     $idCliente = $buscaId['CPF'];
 
-                    $insereReserva = "insert into reservar (data_entrada, data_saida, cpf_cliente) values ('".$data_entrada."', '".$data_saida."', '".$idCliente."'); ";
-
+                    $insereReserva = "insert into reservar (data_entrada, hora_entrada, data_saida, hora_saida, cpf_cliente) values ('".$data_entrada."', '".$hora_entrada."', '".$data_saida."', '".$hora_saida."', '".$idCliente."'); ";
+                    
                     if(mysqli_query($conexao, $insereReserva)){
                         echo "<script> alert('Vaga Reservada com sucesso.') </script>";
                     }else{
@@ -108,7 +115,7 @@
                         //echo $email;
                     }
                 }else{
-                    echo "<script> alert('A data inserida é inválida.') </script>";
+                    echo "<script> alert('A data inserida é inválida ou a hora inserida não é válida.') </script>";
                 }
             }                     
         ?>

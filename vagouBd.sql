@@ -8,9 +8,11 @@ create table cliente (
 );
 
 create table reservar (
-    id_vaga int unsigned auto_increment ,
+    id_vaga int unsigned auto_increment,
     data_entrada date not null,
+    hora_entrada time not null,
     data_saida date not null,
+    hora_saida time not null,
     cpf_cliente varchar(14) not null,
     primary key (id_vaga),
     CONSTRAINT fk_cpf_cliente FOREIGN KEY (cpf_cliente) REFERENCES cliente (CPF)
@@ -35,9 +37,4 @@ CREATE TABLE estacionamento (
     primary key (id_estacio)
 );
 
-
--------------------------------------------------------------------------------- // -------------------------------------------------------------------------
-insert into estacionamento (nome_estacio,CNPJ,senha_estacio,id_endereco1,id_preco1,telefone,email_estacio) values 
-
-('agoravaidarcerto','123456789','123','11','1','264561','agoravaidarcerto@gmail.com');
 
