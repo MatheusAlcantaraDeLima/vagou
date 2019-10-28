@@ -19,8 +19,14 @@
         <?php
                 include_once("conexao.php");
                 mysqli_set_charset($conexao, "utf8");
-                $cpf_cliente = $_SESSION['cpf'];
-                $selectVaga = "select * from reservar where cpf_cliente like '".$cpf_cliente."' ";
+                
+                $email = $_SESSION['email'];
+                $selectId =  "select CPF from cliente where email like '".$email."' ";
+                $executaBusca = mysqli_query($conexao, $selectId);
+                $buscaId = mysqli_fetch_array($executaBusca);
+                $idCliente = $buscaId['CPF'];
+
+                $selectVaga = "select * from reservar where cpf_cliente like '".$idCliente."' ";
             
                 $execQuery = mysqli_query($conexao, $selectVaga);
                 if(mysqli_num_rows($execQuery) > 0){
@@ -45,7 +51,7 @@
                                 <td><?php echo $rows["id_vaga"] ?></td>
                                 <td><?php echo $rows["id_estacionamento"] ?></td>
                                 <td><?php echo $rows["data_entrada"] ?></td>
-                                <td><?php echo $rows["hora_entrad"] ?></td>
+                                <td><?php echo $rows["hora_entrada"] ?></td>
                                 <td><?php echo $rows["data_saida"] ?></td>
                                 <td><?php echo $rows["hora_saida"] ?></td>
                                 <td><?php echo $rows["cpf_cliente"] ?></td>							

@@ -101,6 +101,7 @@
                     $executaBusca = mysqli_query($conexao, $selectId);
                     $buscaId = mysqli_fetch_array($executaBusca);
                     $idCliente = $buscaId['CPF'];
+
                     $insereReserva = "insert into reservar (id_estacionamento ,data_entrada, hora_entrada, data_saida, hora_saida, cpf_cliente) values ('".$id_estacio."', '".$data_entrada."', '".$hora_entrada."', '".$data_saida."', '".$hora_saida."', '".$idCliente."'); ";
                     
                     if(mysqli_query($conexao, $insereReserva)){
