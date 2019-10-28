@@ -18,9 +18,13 @@
 					<a class="btn btn-outline-primary nav-link" href="compara.php">Compara</a>
 				</li>
 				<li class="nav-item">
-					<a class="btn btn-outline-primary nav-link" href="reserva.php">Reserva</a>
+					<a class="btn btn-outline-primary nav-link" href="reserva.php">Reservar</a>
 				</li>
 				<li class="nav-item">
+					<a class="btn btn-outline-primary nav-link" href="reservas.php">Reservas</a>
+				</li>
+				<li class="nav-item">
+					<a class="btn btn-outline-primary nav-link" href="index.php">Sair</a>
 				</li>
 			</ul>
 		</div>

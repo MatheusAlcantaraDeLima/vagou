@@ -23,7 +23,6 @@
         <?php
             include_once("conexao.php");
             mysqli_set_charset($conexao, "utf8");
-
             if(isset($_GET["id"])){
                 $id = $_GET['id'];
             
@@ -65,6 +64,7 @@
             </tr>    
         </tbody>
         <?php
+            $_SESSION['id_estacio'] = $rows['id_estacio'];
             }   //FIM DO WHILE    
         ?>
         </table><!--FIM DA TABLE-->
@@ -96,15 +96,12 @@
                 if( (($data_entrada >= $sysData) && ($data_saida >= $sysData)) || (($data_entrada == $data_saida) && ($hora_entrada > $hora_saida)) ){
                    
                     $email = $_SESSION['email'];
+                    $id_estacio = $_SESSION['id_estacio'];
                     $selectId =  "select CPF from cliente where email like '".$email."' ";
-
                     $executaBusca = mysqli_query($conexao, $selectId);
-
                     $buscaId = mysqli_fetch_array($executaBusca);
-
                     $idCliente = $buscaId['CPF'];
-
-                    $insereReserva = "insert into reservar (data_entrada, hora_entrada, data_saida, hora_saida, cpf_cliente) values ('".$data_entrada."', '".$hora_entrada."', '".$data_saida."', '".$hora_saida."', '".$idCliente."'); ";
+                    $insereReserva = "insert into reservar (id_estacionamento ,data_entrada, hora_entrada, data_saida, hora_saida, cpf_cliente) values ('".$id_estacio."', '".$data_entrada."', '".$hora_entrada."', '".$data_saida."', '".$hora_saida."', '".$idCliente."'); ";
                     
                     if(mysqli_query($conexao, $insereReserva)){
                         echo "<script> alert('Vaga Reservada com sucesso.') </script>";
@@ -112,6 +109,7 @@
                         echo "<script> alert('Erro ao reservar a vaga.') </script>";
                         //TESTES PARA VERIFICAR SE OS VALORES ESTÃO SENDO PEGOS
                         //echo $idCliente.'<br>';
+                        //echo $id_estacio.'<br>';
                         //echo $email;
                     }
                 }else{
