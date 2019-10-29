@@ -63,11 +63,11 @@
 		<!--Adicionando máscara para o CPF, CNPJ, CEP e DATA-->
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#cpf").mask("999.999.999-99");
-				$("#cnpj").mask("99.999.999/9999-99");
-				$("#cep").mask("99999-999");
-				$("#telefone").mask("(99) 99999-9999");
-                $(".preco").mask('#.##0,00', {reverse: true});
+				$("#cpf").mask("000.000.000-00");
+				$("#cnpj").mask("00.000.000/0000-00");
+				$("#cep").mask("00000-000");
+				$("#telefone").mask("(00) 00000-0000");
+                $(".preco").mask("R$ #.##0,00");
 			});
 		</script>
     <!--Chamando arquivo js com funções de interação do usuário com o form-->

@@ -24,8 +24,8 @@
 		?>
         <hr>
         <h2 style="text-align: center;">Mapa</h2>
-        <div id="map" class="map"></div>
-    
+        <iframe src="https://embed.waze.com/iframe?zoom=13&lat=-22.954803200000004&lon=-42.7761664"
+        width="1100" height="830"></iframe>
         <script type="text/javascript">
             var lat;
             var long;
@@ -37,23 +37,9 @@
             function showPosition(position){
                 lat = position.coords.latitude;
                 long = position.coords.longitude;
-                //teste para verificar as coordenadas
                 console.log(`Latidute ${lat}, Longitude ${long}`);
-                var map = new ol.Map({
-                    target: 'map',
-                    layers: [
-                        new ol.layer.Tile({
-                            source: new ol.source.OSM()
-                        })
-                    ],
-                    view: new ol.View({
-                        //CORRIGIR O ERRO DE COORDENADAS, ESTÁ INDO PARA UM LOCAL TOTALMENTE DIFERENTE DA LOCALIZAÇÃO DO DISPOSITIVO
-                        center: ol.proj.fromLonLat([ long, lat]),
-                        zoom: 11
-                    })
-                });
             }
-    </script>
+        </script>
     </div>
 </body>
 </html>

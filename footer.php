@@ -1,5 +1,14 @@
-<!--Adicionado CSS <link rel="stylesheet" href="css/estiloRodape.css">-->
-
+<!--Adicionado CSS <link rel="stylesheet" href="css/estiloRodape.css"> -->
+<style>
+  footer{
+    background-color: #007bff;
+    color:white;
+    bottom: 0px;
+    margin-top: 794px;
+    padding: 20px;
+    width: 100%;
+  }
+</style>
 <footer>
   <div class="row">
     <div class="col"></div>
