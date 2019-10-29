@@ -15,7 +15,7 @@
             session_start(); //INICIANDO A SESSÃO
 		?>
         <hr>
-        <h2 style="text-align: center;">Reserva</h2>
+        <h2 style="text-align: center;">Reservas Feitas</h2>
         <?php
                 include_once("conexao.php");
                 mysqli_set_charset($conexao, "utf8");
