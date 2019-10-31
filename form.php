@@ -30,12 +30,12 @@
             <div class="form-group">
                 <label><span class="sr-only">Nome</span><input type="text" name="nomePF" placeholder="Digite seu nome" class="form-control" size="100" maxlength="50" required></label>
                 <label><span class="sr-only">E-mail</span><input type="text" name="emailPF" placeholder="Digite seu e-mail" class="form-control" size="100" maxlength="100" required></label>
-                <label><span class="sr-only">Data de Nascimento</span><input type="date" name="dataNasci" id="dataNasci" placeholder="Digite sua data de nascimento" class="form-control" size="100" required></label>
+                <label><span class="sr-only">Data de Nascimento</span><input type="date" name="dataNasci" id="dataNasci" placeholder="Digite sua data de nascimento" class="form-control" size="100" required ></label><small>*Data de nascimento</small>
                 <label><span class="sr-only">CPF</span><input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" class="form-control" size="100"  required></label>
                 <label><span class="sr-only">Senha</span><input type="password" name="senhaPF" placeholder="Digite sua senha" class="form-control" size="100" maxlength="20" required></label>
             </div>
-            <input type="submit" value="cadastrar" class="btn btn-primary">
-            <input class="btn btn-primary" type="reset" value="Resetar">
+            <input type="submit" value="cadastrar" class="btn btn-success">
+            <input class="btn btn-danger" type="reset" value="Resetar">
         </form>
         <!--FORM pessoa jurídica-->
         <form action="validaFormPJ.php" method="post" id="formJuridica">
@@ -56,14 +56,14 @@
                 <label><span class="sr-only">Preço por ano</span><input type="text" name="preco_ano" placeholder="Digite o preço por ano" class="form-control preco" size="100" maxlength="9"></label>
                 <label><span class="sr-only">Senha</span><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label>
             </div>
-            <input type="submit" value="cadastrar" class="btn btn-primary">
-            <input class="btn btn-primary" type="reset" value="Resetar">
+            <input type="submit" value="cadastrar" class="btn btn-success">
+            <input class="btn btn-danger" type="reset" value="Resetar">
         </form>
     </div>
 		<!--Adicionando máscara para o CPF, CNPJ, CEP e DATA-->
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#cpf").mask("000.000.000-00");
+                $("#cpf").mask("000.000.000-00");
 				$("#cnpj").mask("00.000.000/0000-00");
 				$("#cep").mask("00000-000");
 				$("#telefone").mask("(00) 00000-0000");
