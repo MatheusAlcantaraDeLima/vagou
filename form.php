@@ -40,21 +40,21 @@
         <!--FORM pessoa jurídica-->
         <form action="validaFormPJ.php" method="post" id="formJuridica">
             <div class="form-group">
-                <label><span class="sr-only">Nome do estacionamento</span><input type="text" name="nomePJ" placeholder="Digite o Nome do estacionamento" class="form-control" size="100" maxlength="40" required></label><br>
-                <label><span class="sr-only">E-mail da empresa</span><input type="text" name="emailPJ" placeholder="Digite o e-mail da empresa" class="form-control" size="100"  maxlength="100" required></label><br>
-                <label><span class="sr-only">Telefone</span><input type="text" name="telefone" id="telefone" placeholder="Digite o número de telefone" class="form-control" size="100" required></label><br>
-                <label><span class="sr-only">CNPJ</span><input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ" class="form-control" size="100" required></label><br>
-                <label><span class="sr-only">CEP</span><input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="form-control" size="100" required onblur="pesquisacep(this.value);"></label><br>
-                <label><span class="sr-only">Rua</span><input type="text" name="rua" id="rua" placeholder="Digite a Rua" class="form-control" size="100" required></label><br>
-                <label><span class="sr-only">Bairro</span><input type="text" name="bairro" id="bairro" placeholder="Digite o bairro" class="form-control" size="100" required></label><br>
-                <label><span class="sr-only">Cidade</span><input type="text" name="cidade" id="cidade" placeholder="Digite a cidade" class="form-control" size="100" required></label><br>
-                <label><span class="sr-only">estado</span><input type="text" name="estado" id="uf" placeholder="Digite o Estado" class="form-control" size="100" required></label><br>
-                <label><span class="sr-only">Preço por hora</span><input type="text" name="preco_hora" placeholder="Digite o preço por hora" class="form-control preco" size="100" required maxlength="9"></label><br>
-                <label><span class="sr-only">Preço por dia</span><input type="text" name="preco_dia" placeholder="Digite o preço por dia" class="form-control preco" size="100" maxlength="9"></label><br>
-                <label><span class="sr-only">Preço por semana</span><input type="text" name="preco_semana" placeholder="Digite o preço por semana" class="form-control preco" size="100" maxlength="9"></label><br>
-                <label><span class="sr-only">Preço por mês</span><input type="text" name="preco_mes" placeholder="Digite o preço por mes" class="form-control preco" size="100" maxlength="9"></label><br>
-                <label><span class="sr-only">Preço por ano</span><input type="text" name="preco_ano" placeholder="Digite o preço por ano" class="form-control preco" size="100" maxlength="9"></label><br>
-                <label><span class="sr-only">Senha</span><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label><br>
+                <label><span class="sr-only">Nome do estacionamento</span><input type="text" name="nomePJ" placeholder="Digite o Nome do estacionamento" class="form-control" size="100" maxlength="40" required></label>
+                <label><span class="sr-only">E-mail da empresa</span><input type="text" name="emailPJ" placeholder="Digite o e-mail da empresa" class="form-control" size="100"  maxlength="100" required></label>
+                <label><span class="sr-only">Telefone</span><input type="text" name="telefone" id="telefone" placeholder="Digite o número de telefone" class="form-control" size="100" required></label>
+                <label><span class="sr-only">CNPJ</span><input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ" class="form-control" size="100" required></label>
+                <label><span class="sr-only">CEP</span><input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="form-control" size="100" required onblur="pesquisacep(this.value);"></label>
+                <label><span class="sr-only">Rua</span><input type="text" name="rua" id="rua" placeholder="Digite a Rua" class="form-control" size="100" required></label>
+                <label><span class="sr-only">Bairro</span><input type="text" name="bairro" id="bairro" placeholder="Digite o bairro" class="form-control" size="100" required></label>
+                <label><span class="sr-only">Cidade</span><input type="text" name="cidade" id="cidade" placeholder="Digite a cidade" class="form-control" size="100" required></label>
+                <label><span class="sr-only">estado</span><input type="text" name="estado" id="uf" placeholder="Digite o Estado" class="form-control" size="100" required></label>
+                <label><span class="sr-only">Preço por hora</span><input type="text" name="preco_hora" placeholder="Digite o preço por hora" class="form-control preco" size="100" required maxlength="9"></label>
+                <label><span class="sr-only">Preço por dia</span><input type="text" name="preco_dia" placeholder="Digite o preço por dia" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Preço por semana</span><input type="text" name="preco_semana" placeholder="Digite o preço por semana" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Preço por mês</span><input type="text" name="preco_mes" placeholder="Digite o preço por mes" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Preço por ano</span><input type="text" name="preco_ano" placeholder="Digite o preço por ano" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Senha</span><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label>
             </div>
             <input type="submit" value="cadastrar" class="btn btn-primary">
             <input class="btn btn-primary" type="reset" value="Resetar">
