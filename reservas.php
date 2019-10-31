@@ -66,6 +66,24 @@
         <?php
                 }
         ?>
-                </div>
+        <form>
+            <label for="inputID"><span class="sr-only">ID da vaga</span></label>
+            <input type="number" class="form-control" placeholder="Digite o ID da vaga para desmarcar a reserva efetuada." name="idVaga" id="inputID" min="1">
+            <input type="submit" value="Desmarcar Reserva" class="btn btn-danger">
+        </form>
+        <?php
+            if(isset($_GET['idVaga'])){
+                $idVaga = $_GET['idVaga'];
+                if($idVaga >= 1){
+                    $deletaVaga = "delete from reservar where id_vaga = ".$idVaga;
+                    $execQuery = mysqli_query($conexao, $deletaVaga);
+                    echo "<script>alert('Reserva deletada com sucesso.')</script>";
+                    echo "<script>location.href='reservas.php'</script>";
+                }else{
+                    echo "<script>alert('ID inválido, favor, insira novamente.')</script>";
+                }
+            }
+        ?>
+    </div>
 </body>
 </html>

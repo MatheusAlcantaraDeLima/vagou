@@ -36,7 +36,7 @@
                 <label><span class="sr-only">CPF</span><input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" class="form-control" size="100"  required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"></label>
                 <label><span class="sr-only">Senha</span><input type="password" name="senhaPF" placeholder="Digite sua senha" class="form-control" size="100" maxlength="20" required></label>
             </div>
-            <input type="submit" value="cadastrar" class="btn btn-success">
+            <input type="submit" value="Cadastrar" class="btn btn-success">
             <input class="btn btn-danger" type="reset" value="Resetar">
         </form>
         <!--FORM pessoa jurídica-->
@@ -58,7 +58,7 @@
                 <label><span class="sr-only">Preço por ano</span><input type="text" name="preco_ano" placeholder="Digite o preço por ano" class="form-control preco" size="100" maxlength="9"></label>
                 <label><span class="sr-only">Senha</span><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label>
             </div>
-            <input type="submit" value="cadastrar" class="btn btn-success">
+            <input type="submit" value="Cadastrar" class="btn btn-success">
             <input class="btn btn-danger" type="reset" value="Resetar">
         </form>
     </div>
