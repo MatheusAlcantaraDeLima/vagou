@@ -14,7 +14,7 @@ create table reservar (
     hora_entrada time not null,
     data_saida date not null,
     hora_saida time not null,
-    cpf_cliente varchar(14) not null,
+    cpf_cliente char(14) not null,
     primary key (id_vaga),
     CONSTRAINT fk_cpf_cliente FOREIGN KEY (cpf_cliente) REFERENCES cliente (CPF),
     CONSTRAINT fk_id_estacio FOREIGN KEY (id_estacionamento) REFERENCES estacionamento (id_estacio)
