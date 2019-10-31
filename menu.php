@@ -10,14 +10,11 @@
 	</div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light ollapse navbar-collapse">
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    	<span class="navbar-toggler-icon"></span>
-  	</button>
-	<div class="col" id="navbarNavAltMarkup">
+<nav class="navbar navbar-expand-lg nav-pills nav-fill">
+	<div class="col">
 		<ul class="nav">
 			<li class="nav-item">
-				<a class="nav-item nav-link active btn btn-outline-primary" href="index.php">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link btn btn-outline-primary" href="index.php">Home</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-item nav-link btn btn-outline-primary" href="logar.php">Logar</a>

@@ -16,8 +16,8 @@
 		<hr>
 		<h2 style="text-align: center;">Funções do APP</h2><br>
 		<div class="row">
-			<div class="col-4">
-				<img src="img/icon/busca_icon.png" alt="icone de busca do app VaGou!" style="margin-left:100px;">
+			<div class="col">
+				<img src="img/icon/busca_icon.png" alt="icone de busca do app VaGou!" style="margin-left:100px;" class="img-fluid">
 				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
 					<div class="card-body text-primary">
 						<h5 class="card-title" style="text-align:center;">Busca</h5>
@@ -25,8 +25,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-4">
-				<img src="img/icon/compara_icon.png" alt=" icone de comparação de preços do VaGou!" style="margin-left:100px;">
+			<div class="col">
+				<img src="img/icon/compara_icon.png" alt=" icone de comparação de preços do VaGou!" style="margin-left:100px;" class="img-fluid">
 				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
 					<div class="card-body text-primary">
 						<h5 class="card-title" style="text-align:center;">Compara</h5>
@@ -34,8 +34,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-4"> 
-				<img src="img/icon/reserva_icon.png" alt="icone de reserva de vagas do VaGou!" style="margin-left:100px;">
+			<div class="col"> 
+				<img src="img/icon/reserva_icon.png" alt="icone de reserva de vagas do VaGou!" style="margin-left:100px;" class="img-fluid">
 				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
 					<div class="card-body text-primary">
 						<h5 class="card-title" style="text-align:center;">Reserva</h5>

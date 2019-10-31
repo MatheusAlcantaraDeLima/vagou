@@ -9,7 +9,7 @@
 	</div>
 	<div class="row">
 		<small><strong>Dê valor ao tempo que realmente importa!</strong></small>
-		<div class="col">
+		<div class="col nav-pills nav-fill">
 			<ul class="nav">
 				<li class="nav-item">
 					<a class="btn btn-outline-primary nav-link" href="mapa.php">Mapa</a>

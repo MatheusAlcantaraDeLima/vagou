@@ -9,12 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
     <!--Tags Meta-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      .map {
-        height: 600px;
-        width: 100%;
-      }
-    </style>
+
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>
     <!--Pega a localização do aparelho-->
     <title>VaGou!</title>
