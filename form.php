@@ -13,6 +13,8 @@
 		<script src="js/jquery/src/jquery.mask.js" type="text/javascript"></script>
         <!--Adicionado Web Service para procurar e preencher os campos do PJ após inserir o CEP-->
         <script src="js/webServiceCep.js" type="text/javascript"></script>
+        <!--Tags Meta-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>VaGou!</title>
 </head>
 <body>
