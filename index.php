@@ -15,35 +15,9 @@
 		?>
 		<hr>
 		<h2 style="text-align: center;">Funções do APP</h2><br>
-		<div class="row">
-			<div class="col">
-				<img src="img/icon/busca_icon.png" alt="icone de busca do app VaGou!" style="margin-left:100px;" class="img-fluid">
-				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
-					<div class="card-body text-primary">
-						<h5 class="card-title" style="text-align:center;">Busca</h5>
-						<p class="card-text"><strong>Busca por estacionamentos próximos a você</strong></p>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<img src="img/icon/compara_icon.png" alt=" icone de comparação de preços do VaGou!" style="margin-left:100px;" class="img-fluid">
-				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
-					<div class="card-body text-primary">
-						<h5 class="card-title" style="text-align:center;">Compara</h5>
-						<p class="card-text"><strong>Compara e mostra os melhores preços para você</strong></p>
-					</div>
-				</div>
-			</div>
-			<div class="col"> 
-				<img src="img/icon/reserva_icon.png" alt="icone de reserva de vagas do VaGou!" style="margin-left:100px;" class="img-fluid">
-				<div class="card border-primary mb-3" style="max-width: 18rem; margin-top:15px;">
-					<div class="card-body text-primary">
-						<h5 class="card-title" style="text-align:center;">Reserva</h5>
-						<p class="card-text"><strong>Reserve a sua vaga sem mesmo ter saído de casa</strong></p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<img src="img/busca.png" alt="Funcionalidade de busca por estacionamentos com vagas" class="img-fluid">
+		<img src="img/compara.png" alt="Funcionalidade de comparação de preço" class="img-fluid">
+		<img src="img/reserva.png" alt="Funcionalidade para reservar vagas em um estacionamento." class="img-fluid">
 	</div>
 	<!--Adicionando footer-->
     <?php
