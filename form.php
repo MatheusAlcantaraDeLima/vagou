@@ -33,7 +33,7 @@
                 <label><span class="sr-only">Nome</span><input type="text" name="nomePF" placeholder="Digite seu nome" class="form-control" size="100" maxlength="50" required></label>
                 <label><span class="sr-only">E-mail</span><input type="text" name="emailPF" placeholder="Digite seu e-mail" class="form-control" size="100" maxlength="100" required></label>
                 <label><span class="sr-only">Data de Nascimento</span><input type="date" name="dataNasci" id="dataNasci" placeholder="Digite sua data de nascimento" class="form-control" size="100" required></label><small>*Data de nascimento</small>
-                <label><span class="sr-only">CPF</span><input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" class="form-control" size="100"  required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"></label>
+                <label><span class="sr-only">CPF</span><input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF ex: 999.999.999-99" class="form-control" size="100"  required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"></label>
                 <label><span class="sr-only">Senha</span><input type="password" name="senhaPF" placeholder="Digite sua senha" class="form-control" size="100" maxlength="20" required></label>
             </div>
             <input type="submit" value="Cadastrar" class="btn btn-success">
@@ -44,8 +44,8 @@
             <div class="form-group">
                 <label><span class="sr-only">Nome do estacionamento</span><input type="text" name="nomePJ" placeholder="Digite o Nome do estacionamento" class="form-control" size="100" maxlength="40" required></label>
                 <label><span class="sr-only">E-mail da empresa</span><input type="text" name="emailPJ" placeholder="Digite o e-mail da empresa" class="form-control" size="100"  maxlength="100" required></label>
-                <label><span class="sr-only">Telefone</span><input type="text" name="telefone" id="telefone" placeholder="Digite o número de telefone" class="form-control" size="100" required pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"></label>
-                <label><span class="sr-only">CNPJ</span><input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ" class="form-control" size="100" required pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}"></label>
+                <label><span class="sr-only">Telefone</span><input type="text" name="telefone" id="telefone" placeholder="Digite o número de telefone ex: (99) 99999-9999" class="form-control" size="100" required pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"></label>
+                <label><span class="sr-only">CNPJ</span><input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ ex: 99.999.999/9999-99" class="form-control" size="100" required pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}"></label>
                 <label><span class="sr-only">CEP</span><input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="form-control" size="100" required onblur="pesquisacep(this.value);"></label>
                 <label><span class="sr-only">Rua</span><input type="text" name="rua" id="rua" placeholder="Digite a Rua" class="form-control" size="100" required></label>
                 <label><span class="sr-only">Bairro</span><input type="text" name="bairro" id="bairro" placeholder="Digite o bairro" class="form-control" size="100" required></label>
@@ -65,10 +65,10 @@
 		<!--Adicionando máscara para o CPF, CNPJ, CEP e DATA-->
 		<script type="text/javascript">
 			$(document).ready(function(){
-                $("#cpf").mask("000.000.000-00");
-				$("#cnpj").mask("00.000.000/0000-00");
-				$("#cep").mask("00000-000");
-				$("#telefone").mask("(00) 00000-0000");
+                //$("#cpf").mask("000.000.000-00");
+				//$("#cnpj").mask("00.000.000/0000-00");
+				//$("#cep").mask("99999-999");
+				//$("#telefone").mask("(00) 00000-0000");
                 $(".preco").mask("#.##0,00", {reverse: true});
 			});
 		</script>

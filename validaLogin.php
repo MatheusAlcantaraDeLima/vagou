@@ -17,6 +17,7 @@
         session_start();
         $_SESSION['email'] = $dados['email'];
         echo "<script>alert('Logado com Sucesso!')</script>";
+        
         echo "<script> window.location.href = 'mapa.php'</script>";
     }else{
         echo "<script>alert('Erro ao logar-se.')</script>";

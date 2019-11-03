@@ -47,10 +47,10 @@
                         <th scope="col">Rua</th>
                         <th scope="col">Bairro</th>
                         <th scope="col">Cidade</th>
-                        <th scope="col">Preço por Hora</th>
-                        <th scope="col">Preço por Dias</th>
-                        <th scope="col">Preço por Semanas</th>
-                        <th scope="col">Preço por Mês</th>
+                        <th scope="col">Preço por Hora(R$)</th>
+                        <th scope="col">Preço por Dias(R$)</th>
+                        <th scope="col">Preço por Semanas(R$)</th>
+                        <th scope="col">Preço por Mês(R$)</th>
                     </tr>
                 </thead>
         
