@@ -21,8 +21,11 @@
 		?>
         <hr>
         <h2 style="text-align: center;">Mapa</h2>
-        <iframe class = "embed-responsive-item" src="https://embed.waze.com/iframe?zoom=13&lat=-22.954803200000004&lon=-42.7761664"
-        width="1100" height="830" allowfullscreen></iframe>
+        
+            <iframe class = "embed-responsive-item" src="https://embed.waze.com/iframe?zoom=13&lat=-22.954803200000004&lon=-42.7761664"
+            width="1100" height="830" allowfullscreen></iframe>
+        
+        
         <script type="text/javascript">
             var lat;
             var long;

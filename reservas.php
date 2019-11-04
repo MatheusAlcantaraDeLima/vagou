@@ -68,7 +68,7 @@
         ?>
         <form>
             <label for="inputID"><span class="sr-only">ID da vaga</span></label>
-            <input type="number" class="form-control" placeholder="Digite o ID da vaga para desmarcar a reserva efetuada." name="idVaga" id="inputID" min="1">
+            <input type="number" class="form-control" placeholder="Digite o ID da vaga para desmarcar a reserva efetuada." name="idVaga" id="inputID" min="1"><br>
             <input type="submit" value="Desmarcar Reserva" class="btn btn-danger">
         </form>
         <?php
