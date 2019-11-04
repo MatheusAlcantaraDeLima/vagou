@@ -51,11 +51,11 @@
                 <label><span class="sr-only">Bairro</span><input type="text" name="bairro" id="bairro" placeholder="Digite o bairro" class="form-control" size="100" required></label>
                 <label><span class="sr-only">Cidade</span><input type="text" name="cidade" id="cidade" placeholder="Digite a cidade" class="form-control" size="100" required></label>
                 <label><span class="sr-only">estado</span><input type="text" name="estado" id="uf" placeholder="Digite o Estado" class="form-control" size="100" required></label>
-                <label><span class="sr-only">Preço por hora</span><input type="text" name="preco_hora" placeholder="Digite o preço por hora" class="form-control preco" size="100" required maxlength="9"></label>
-                <label><span class="sr-only">Preço por dia</span><input type="text" name="preco_dia" placeholder="Digite o preço por dia" class="form-control preco" size="100" maxlength="9"></label>
-                <label><span class="sr-only">Preço por semana</span><input type="text" name="preco_semana" placeholder="Digite o preço por semana" class="form-control preco" size="100" maxlength="9"></label>
-                <label><span class="sr-only">Preço por mês</span><input type="text" name="preco_mes" placeholder="Digite o preço por mes" class="form-control preco" size="100" maxlength="9"></label>
-                <label><span class="sr-only">Preço por ano</span><input type="text" name="preco_ano" placeholder="Digite o preço por ano" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Preço por hora</span><input type="text" name="preco_hora" placeholder="Digite o preço por hora (R$)" class="form-control preco" size="100" required maxlength="9"></label>
+                <label><span class="sr-only">Preço por dia</span><input type="text" name="preco_dia" placeholder="Digite o preço por dia (R$)" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Preço por semana</span><input type="text" name="preco_semana" placeholder="Digite o preço por semana (R$)" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Preço por mês</span><input type="text" name="preco_mes" placeholder="Digite o preço por mes (R$)" class="form-control preco" size="100" maxlength="9"></label>
+                <label><span class="sr-only">Preço por ano</span><input type="text" name="preco_ano" placeholder="Digite o preço por ano (R$)" class="form-control preco" size="100" maxlength="9"></label>
                 <label><span class="sr-only">Senha</span><input type="password" name="senhaPJ" placeholder="Digite a senha" class="form-control" size="100"  maxlength="20" required></label>
             </div>
             <input type="submit" value="Cadastrar" class="btn btn-success">
@@ -65,10 +65,10 @@
 		<!--Adicionando máscara para o CPF, CNPJ, CEP e DATA-->
 		<script type="text/javascript">
 			$(document).ready(function(){
-                //$("#cpf").mask("000.000.000-00");
-				//$("#cnpj").mask("00.000.000/0000-00");
-				//$("#cep").mask("99999-999");
-				//$("#telefone").mask("(00) 00000-0000");
+                $("#cpf").mask("000.000.000-00");
+				$("#cnpj").mask("00.000.000/0000-00");
+				$("#cep").mask("99999-999");
+				$("#telefone").mask("(00) 00000-0000");
                 $(".preco").mask("#.##0,00", {reverse: true});
 			});
 		</script>
