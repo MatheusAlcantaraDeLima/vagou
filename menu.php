@@ -1,6 +1,6 @@
 <!--Adicionado CSS  <link rel="stylesheet" href="css/estiloMenu.css">-->
 
-
+<link rel="shortcut icon" href="img/icon/favicon.ico"/>
 
 <div class="col">
 	<div class="row">
